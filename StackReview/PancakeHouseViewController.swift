@@ -57,22 +57,22 @@ class PancakeHouseViewController : UIViewController {
     self.configureView()
   }
   
-  @IBAction func handleShowDetailsButtonPressed(sender: UIButton) {
+  @IBAction func handleShowDetailsButtonPressed(_ sender: UIButton) {
 
   }
   
   
-  private func centreMap(map: MKMapView?, atPosition position: CLLocationCoordinate2D?) {
+  fileprivate func centreMap(_ map: MKMapView?, atPosition position: CLLocationCoordinate2D?) {
     guard let map = map,
       let position = position else {
         return
     }
-    map.zoomEnabled = false
-    map.scrollEnabled = false
-    map.pitchEnabled = false
-    map.rotateEnabled = false
+    map.isZoomEnabled = false
+    map.isScrollEnabled = false
+    map.isPitchEnabled = false
+    map.isRotateEnabled = false
     
-    map.setCenterCoordinate(position, animated: true)
+    map.setCenter(position, animated: true)
     
     let zoomRegion = MKCoordinateRegionMakeWithDistance(position, 10000, 10000)
     map.setRegion(zoomRegion, animated: true)
