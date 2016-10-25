@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <frame key="frameInset" width="342" height="118"/>
+                                    <frame key="frameInset" width="342" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vEY-8T-BHT">
@@ -163,6 +163,9 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyU-ur-vh5"/>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iY-sb-epq">
                                         <state key="normal" title="Show/Hide Copyright Notice"/>
+                                        <connections>
+                                            <action selector="handleShowHideTapped:" destination="M4M-oT-X8b" eventType="touchUpInside" id="lLe-n0-oLT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -173,6 +176,10 @@
                             <constraint firstItem="Oy6-GB-IAa" firstAttribute="top" secondItem="8ay-dw-mIO" secondAttribute="bottom" constant="20" id="T5Y-FZ-H4B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentStackView" destination="Oy6-GB-IAa" id="NIQ-Kz-RN0"/>
+                        <outlet property="showHideButton" destination="9iY-sb-epq" id="OCr-Jp-4gb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53q-4S-cfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
