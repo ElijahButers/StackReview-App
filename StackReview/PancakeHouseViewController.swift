@@ -32,6 +32,7 @@ class PancakeHouseViewController : UIViewController {
   @IBOutlet weak var priceGuideLabel: UILabel!
   @IBOutlet weak var ratingImage: UIImageView!
   @IBOutlet weak var showDetailsButton: UIButton!
+    @IBOutlet weak var hideMapButton: UIButton!
 
 
   var pancakeHouse : PancakeHouse? {
@@ -65,6 +66,9 @@ class PancakeHouseViewController : UIViewController {
         animateView(view: detailsLabel, toHidden: true)
         showDetailsButton.setTitle("Show Details", for: .normal)    }
   }
+    
+    @IBAction func handleShowMapButtonPressed(_ sender: UIButton) {
+    }
     
     private func animateView(view: UIView, toHidden hidden: Bool) {
         UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10.0, options: UIViewAnimationOptions(), animations: { ()
