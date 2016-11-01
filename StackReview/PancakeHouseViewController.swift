@@ -58,7 +58,12 @@ class PancakeHouseViewController : UIViewController {
   }
   
   @IBAction func handleShowDetailsButtonPressed(_ sender: UIButton) {
-
+    if detailsLabel.isHidden {
+        animateView(view: detailsLabel, toHidden: false)
+        showDetailsButton.setTitle("Hide Details", for: .normal)
+    } else {
+        animateView(view: detailsLabel, toHidden: true)
+        showDetailsButton.setTitle("Show Details", for: .normal)    }
   }
     
     private func animateView(view: UIView, toHidden hidden: Bool) {
