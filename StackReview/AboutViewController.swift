@@ -30,5 +30,11 @@ class AboutViewController: UIViewController {
   @IBAction func handleShowHideTapped(_ sender: AnyObject) {
     
   }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        contentStackView.isLayoutMarginsRelativeArrangement = true
+    }
   
 }
