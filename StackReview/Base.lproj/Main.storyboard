@@ -70,6 +70,9 @@
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-5l-6rj">
                                                                                         <state key="normal" title="Hide Details"/>
+                                                                                        <connections>
+                                                                                            <action selector="handleShowDetailsButtonPressed:" destination="JEX-9P-axG" eventType="touchUpInside" id="XA0-L7-Iqq"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09v-HN-111">
                                                                                         <state key="normal" title="Hide Map"/>
