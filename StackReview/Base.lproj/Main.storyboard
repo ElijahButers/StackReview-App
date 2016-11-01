@@ -236,6 +236,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.79665655410000003" blue="0.58823320670000001" alpha="1" colorSpace="calibratedRGB"/>
