@@ -76,6 +76,9 @@
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09v-HN-111">
                                                                                         <state key="normal" title="Hide Map"/>
+                                                                                        <connections>
+                                                                                            <action selector="handleShowMapButtonPressed:" destination="JEX-9P-axG" eventType="touchUpInside" id="rPu-F5-lQ1"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                             </stackView>

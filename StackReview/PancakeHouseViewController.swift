@@ -59,6 +59,7 @@ class PancakeHouseViewController : UIViewController {
   }
   
   @IBAction func handleShowDetailsButtonPressed(_ sender: UIButton) {
+    
     if detailsLabel.isHidden {
         animateView(view: detailsLabel, toHidden: false)
         showDetailsButton.setTitle("Hide Details", for: .normal)
@@ -68,6 +69,14 @@ class PancakeHouseViewController : UIViewController {
   }
     
     @IBAction func handleShowMapButtonPressed(_ sender: UIButton) {
+        
+        if mapView.isHidden {
+            animateView(view: mapView, toHidden: false)
+            hideMapButton.setTitle("Hide Map", for: .normal)
+        } else {
+            animateView(view: mapView, toHidden: true)
+            hideMapButton.setTitle("Show Map", for: .normal)
+        }
     }
     
     private func animateView(view: UIView, toHidden hidden: Bool) {
