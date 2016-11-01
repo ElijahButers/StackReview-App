@@ -60,6 +60,13 @@ class PancakeHouseViewController : UIViewController {
   @IBAction func handleShowDetailsButtonPressed(_ sender: UIButton) {
 
   }
+    
+    private func animateView(view: UIView, toHidden hidden: Bool) {
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10.0, options: UIViewAnimationOptions(), animations: { ()
+            -> Void in
+            view.isHidden = hidden
+            }, completion: nil)
+    }
   
   
   fileprivate func centreMap(_ map: MKMapView?, atPosition position: CLLocationCoordinate2D?) {
