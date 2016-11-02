@@ -26,15 +26,34 @@ class AboutViewController: UIViewController {
 
   @IBOutlet weak var contentStackView : UIStackView!
   @IBOutlet weak var showHideButton : UIButton!
-  
-  @IBAction func handleShowHideTapped(_ sender: AnyObject) {
-    
-  }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contentStackView.isLayoutMarginsRelativeArrangement = true
     }
+    
+    private func createCopyrightInfo() -> UIStackView {
+        
+        let logo = UIImage(named: "rw_logo")
+        let logoImageView = UIImageView(image: logo)
+        
+        let copyrightLabel = UILabel(frame: CGRect.zero)
+        copyrightLabel.text = "© Razeware 2015"
+        
+        let stackView = UIStackView(arrangedSubviews: [logoImageView, copyrightLabel])
+        stackView.axis = .horizontal
+        stackView.spacing = 20.0
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        
+        return stackView
+    }
+  
+  @IBAction func handleShowHideTapped(_ sender: AnyObject) {
+    
+  }
+    
+   
   
 }
