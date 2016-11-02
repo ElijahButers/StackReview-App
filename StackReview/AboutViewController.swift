@@ -26,6 +26,7 @@ class AboutViewController: UIViewController {
 
   @IBOutlet weak var contentStackView : UIStackView!
   @IBOutlet weak var showHideButton : UIButton!
+    @IBOutlet weak var copyrightStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
