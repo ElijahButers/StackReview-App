@@ -55,8 +55,22 @@ class AboutViewController: UIViewController {
   
   @IBAction func handleShowHideTapped(_ sender: AnyObject) {
     
+    if copyrightContentStackView == nil {
+        copyrightContentStackView = createCopyrightInfo()
+        copyrightContentStackView?.isHidden = true
+        copyrightStackView.addArrangedSubview(copyrightContentStackView!)
+        UIView.animate(withDuration: 1.0) {
+            self.copyrightContentStackView?.isHidden = false
+        }
+    } else {
+        UIView.animate(withDuration: 1.0, animations: { () -> Void in
+        self.copyrightContentStackView?.isHidden = true
+            }, completion: { (_) -> Void in
+                self.copyrightContentStackView?.removeFromSuperview()
+                self.copyrightContentStackView = nil
+        })
   }
-    
+}
    
   
 }
