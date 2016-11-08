@@ -44,12 +44,6 @@ class AboutViewController: UIViewController {
         let copyrightLabel = UILabel(frame: CGRect.zero)
         copyrightLabel.text = "© Razeware 2015"
         
-        let stackView = UIStackView(arrangedSubviews: [logoImageView, copyrightLabel])
-        stackView.axis = .horizontal
-        stackView.spacing = 20.0
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-        
         let axisButton = UIButton(type: .roundedRect)
         axisButton.setTitle("Axis Switch", for: .normal)
         axisButton.addTarget(self, action: Selector(("switchCopyrightAxis")), for: .touchUpInside)
@@ -58,6 +52,12 @@ class AboutViewController: UIViewController {
         textStackView.axis = .vertical
         textStackView.spacing = 20.0
         textStackView.alignment = .center
+        
+        let stackView = UIStackView(arrangedSubviews: [logoImageView, textStackView])
+        stackView.axis = .horizontal
+        stackView.spacing = 20.0
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
         
         return stackView
     }
