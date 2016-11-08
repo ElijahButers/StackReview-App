@@ -39,7 +39,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yFZ-og-phY">
@@ -153,15 +153,15 @@
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="StackReview" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="WCw-Qf-5nD" customClass="PancakeHouseTableViewCell" customModule="StackReview" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="375" height="119"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <frame key="frameInset" width="342" height="118"/>
+                                    <frame key="frameInset" width="381" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vEY-8T-BHT">
@@ -219,22 +219,26 @@
                         <viewControllerLayoutGuide type="bottom" id="W0t-mM-Gfl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eWp-El-gqf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgY-cS-AZb">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oy6-GB-IAa">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-Ft-QQs">
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-Ft-QQs">
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StackReview" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-iJ-y9a">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StackReview" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GI-iJ-y9a">
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyU-ur-vh5"/>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="6GI-iJ-y9a" firstAttribute="leading" secondItem="qLT-Ft-QQs" secondAttribute="leading" id="5F3-iV-XSV"/>
+                                                    <constraint firstItem="oyU-ur-vh5" firstAttribute="leading" secondItem="qLT-Ft-QQs" secondAttribute="leading" constant="26" id="7nE-XM-1K6"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="caD-eJ-3HZ" userLabel="Copyright Stack View">
                                                 <subviews>
@@ -247,23 +251,26 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qLT-Ft-QQs" firstAttribute="leading" secondItem="Oy6-GB-IAa" secondAttribute="leading" constant="6" id="RFO-Kq-0s8"/>
+                                        </constraints>
                                         <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.79665655410000003" blue="0.58823320670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="centerX" secondItem="PgY-cS-AZb" secondAttribute="centerX" id="2sI-MV-ru5"/>
-                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="leading" secondItem="PgY-cS-AZb" secondAttribute="leading" constant="31" id="EtG-Ms-ijf"/>
-                                    <constraint firstAttribute="bottom" secondItem="Oy6-GB-IAa" secondAttribute="bottom" id="Rjy-gz-uzB"/>
-                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="top" secondItem="PgY-cS-AZb" secondAttribute="top" id="gUm-bM-Zzr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oy6-GB-IAa" secondAttribute="bottom" id="4pQ-qd-Mcj"/>
+                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="leading" secondItem="PgY-cS-AZb" secondAttribute="leading" constant="31" id="XhL-WR-bDQ"/>
+                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="centerX" secondItem="PgY-cS-AZb" secondAttribute="centerX" id="ipb-rT-9Mn"/>
+                                    <constraint firstItem="Oy6-GB-IAa" firstAttribute="top" secondItem="PgY-cS-AZb" secondAttribute="top" id="thO-qP-xR4"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PgY-cS-AZb" firstAttribute="leading" secondItem="eWp-El-gqf" secondAttribute="leading" id="jeN-Zh-sxd"/>
-                            <constraint firstItem="PgY-cS-AZb" firstAttribute="top" secondItem="8ay-dw-mIO" secondAttribute="bottom" constant="20" id="ouL-HZ-ais"/>
-                            <constraint firstAttribute="trailing" secondItem="PgY-cS-AZb" secondAttribute="trailing" id="y2c-A0-lvK"/>
+                            <constraint firstItem="PgY-cS-AZb" firstAttribute="top" secondItem="8ay-dw-mIO" secondAttribute="bottom" constant="20" id="35Q-nM-xwS"/>
+                            <constraint firstAttribute="trailing" secondItem="PgY-cS-AZb" secondAttribute="trailing" id="eZC-TS-0eO"/>
+                            <constraint firstItem="PgY-cS-AZb" firstAttribute="leading" secondItem="eWp-El-gqf" secondAttribute="leading" id="gS7-VS-FIE"/>
                         </constraints>
                     </view>
                     <connections>

@@ -50,6 +50,10 @@ class AboutViewController: UIViewController {
         stackView.alignment = .center
         stackView.distribution = .equalSpacing
         
+        let axisButton = UIButton(type: .roundedRect)
+        axisButton.setTitle("Axis Switch", for: .normal)
+        axisButton.addTarget(self, action: Selector(("switchCopyrightAxis")), for: .touchUpInside)
+        
         return stackView
     }
   
