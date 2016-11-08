@@ -46,7 +46,7 @@ class AboutViewController: UIViewController {
         
         let axisButton = UIButton(type: .roundedRect)
         axisButton.setTitle("Axis Switch", for: .normal)
-        axisButton.addTarget(self, action: Selector(("switchCopyrightAxis")), for: .touchUpInside)
+        axisButton.addTarget(self, action: #selector(AboutViewController.switchCopyrightAxis), for: .touchUpInside)
         
         let textStackView = UIStackView(arrangedSubviews: [copyrightLabel, axisButton])
         textStackView.axis = .vertical
@@ -64,15 +64,19 @@ class AboutViewController: UIViewController {
     
     func switchCopyrightAxis() {
         
-        guard let copyrightContentStackView = copyrightContentStackView
+        guard let copyrightContentStackView = copyrightContentStackView else {
+          return
+        }
         let newAxis: UILayoutConstraintAxis
         switch copyrightContentStackView.axis {
         case .horizontal:
             newAxis = .vertical
         case .vertical:
             newAxis = .horizontal
-        } else {
-            return
+        }
+        
+        UIView.animate(withDuration: 0.7) {
+            copyrightContentStackView.axis = newAxis
         }
     }
   
