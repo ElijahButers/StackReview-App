@@ -54,6 +54,11 @@ class AboutViewController: UIViewController {
         axisButton.setTitle("Axis Switch", for: .normal)
         axisButton.addTarget(self, action: Selector(("switchCopyrightAxis")), for: .touchUpInside)
         
+        let textStackView = UIStackView(arrangedSubviews: [copyrightLabel, axisButton])
+        textStackView.axis = .vertical
+        textStackView.spacing = 20.0
+        textStackView.alignment = .center
+        
         return stackView
     }
   
