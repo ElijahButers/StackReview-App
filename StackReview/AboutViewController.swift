@@ -61,6 +61,13 @@ class AboutViewController: UIViewController {
         
         return stackView
     }
+    
+    func switchCopyrightAxis() {
+        guard let copyrightContentStackView = copyrightContentStackView
+            else {
+            return
+        }
+    }
   
   @IBAction func handleShowHideTapped(_ sender: AnyObject) {
     
