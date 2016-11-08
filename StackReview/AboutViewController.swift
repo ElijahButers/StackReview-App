@@ -63,8 +63,15 @@ class AboutViewController: UIViewController {
     }
     
     func switchCopyrightAxis() {
+        
         guard let copyrightContentStackView = copyrightContentStackView
-            else {
+        let newAxis: UILayoutConstraintAxis
+        switch copyrightContentStackView.axis {
+        case .horizontal:
+            newAxis = .vertical
+        case .vertical:
+            newAxis = .horizontal
+        } else {
             return
         }
     }
