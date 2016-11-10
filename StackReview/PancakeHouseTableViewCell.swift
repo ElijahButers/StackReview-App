@@ -38,6 +38,8 @@ class PancakeHouseTableViewCell: UITableViewCell {
         nameLabel?.text = pancakeHouse.name
         pancakeImage?.image = pancakeHouse.thumbnail ?? UIImage(named: "placeholder_thumb")
         ratingImage?.image = pancakeHouse.rating.smallRatingImage
+        cityLabel.text = pancakeHouse.city
+        priceIndicatorLabel.text = "\(pancakeHouse.priceGuide)"
       }
     }
   }
