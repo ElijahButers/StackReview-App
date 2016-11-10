@@ -211,8 +211,11 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="cityLabel" destination="1RL-wc-nz5" id="lya-HN-ZC7"/>
+                                    <outlet property="extraDetailsStackView" destination="ERd-Rs-z3w" id="9eI-JW-7Ef"/>
                                     <outlet property="nameLabel" destination="ijt-Oa-jxl" id="VBk-GV-HE3"/>
                                     <outlet property="pancakeImage" destination="mJp-95-Vzl" id="psa-d3-zem"/>
+                                    <outlet property="priceIndicatorLabel" destination="RiT-tq-GuN" id="ESg-Rc-VqR"/>
                                     <outlet property="ratingImage" destination="1ar-AO-FQQ" id="V8L-NL-yKY"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>

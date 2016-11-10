@@ -27,6 +27,9 @@ class PancakeHouseTableViewCell: UITableViewCell {
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var pancakeImage : UIImageView!
   @IBOutlet weak var ratingImage: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var priceIndicatorLabel: UILabel!
+    @IBOutlet weak var extraDetailsStackView: UIStackView!
 
   
   var pancakeHouse : PancakeHouse? {
