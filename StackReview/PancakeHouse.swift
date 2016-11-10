@@ -95,6 +95,7 @@ struct PancakeHouse {
   let location: CLLocationCoordinate2D?
   let details: String
   let rating: PancakeRating
+    let city: String
 }
 
 extension PancakeHouse {
