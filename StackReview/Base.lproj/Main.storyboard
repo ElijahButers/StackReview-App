@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -161,30 +162,42 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="119"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <frame key="frameInset" width="342" height="119"/>
+                                    <frame key="frameInset" width="342" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vEY-8T-BHT">
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="mJp-95-Vzl"/>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-wP-Znq">
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-wP-Znq">
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="PancakeHouseName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijt-Oa-jxl">
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-wc-nz5">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="ijt-Oa-jxl" secondAttribute="bottom" constant="20" symbolic="YES" id="xnW-sl-aKK"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_rate_5_small" translatesAutoresizingMaskIntoConstraints="NO" id="1ar-AO-FQQ"/>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cAb-wP-Znq" secondAttribute="trailing" constant="54" id="6pz-6M-xaT"/>
+                                                <constraint firstItem="cAb-wP-Znq" firstAttribute="top" secondItem="vEY-8T-BHT" secondAttribute="top" constant="29" id="D4d-ct-2g6"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="top" constant="10" id="09L-cF-hoh"/>
-                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leading" constant="10" id="14R-g3-rbo"/>
-                                        <constraint firstAttribute="trailing" secondItem="vEY-8T-BHT" secondAttribute="trailing" constant="10" id="r0G-c2-ncj"/>
-                                        <constraint firstAttribute="bottom" secondItem="vEY-8T-BHT" secondAttribute="bottom" constant="10" id="zV1-Ut-lJc"/>
+                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="leading" secondItem="37f-cq-3Eg" secondAttribute="leadingMargin" constant="2" id="5Wr-qo-D80"/>
+                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="top" secondItem="37f-cq-3Eg" secondAttribute="topMargin" constant="2" id="Ig6-AH-dEc"/>
+                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="centerY" secondItem="37f-cq-3Eg" secondAttribute="centerY" id="Vpo-Da-Ds5"/>
+                                        <constraint firstItem="vEY-8T-BHT" firstAttribute="centerX" secondItem="37f-cq-3Eg" secondAttribute="centerX" id="gj4-xI-NDK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
